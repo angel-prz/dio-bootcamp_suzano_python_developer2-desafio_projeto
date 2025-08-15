@@ -29,7 +29,7 @@ while(True):
 
     if opcao == "1":
 
-        print("\n Deposito: ")
+        print("\n===================== DEPOSITO =================\n")
         deposito = float(input("\n Digite o valor do deposito: "))
             
         if(deposito < 0):
@@ -42,7 +42,7 @@ while(True):
         extrato += f"\n Data: {format_data_hora} - Deposito: R${deposito:10.2f}"
             
     elif opcao == "2":
-        print("\nSaque: ")
+        print("\n===================== SAQUE =================\n")
         if(LIMITE_SAQUES - numero_saques <= 0):
             print("Limite de saques atigindo, volte amanha!")
             continue
@@ -64,12 +64,12 @@ while(True):
         extrato += f"\n Data: {format_data_hora} - Saque: - R${saque:10.2f}"
             
     elif opcao == "3":
-        print("\n Extrato: ")
+        print("\n===================== EXTRATO =================\n")
         if(extrato == ""):
             print("Não foram realizadas movimentações")
 
         print(extrato + 
-              "\n======================================\n" + 
+              "\n------------------------------------------------\n" + 
               f"\n Saldo: {saldo:10.2f}");
     
     elif opcao =="9":
